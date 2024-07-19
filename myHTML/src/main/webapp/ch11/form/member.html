@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>member.html</title>
+<link rel="stylesheet" href="mycss.css">
+<script type="text/javascript">
+	function chk() {
+
+		var list = [ "인터넷", "여행", "게임", "영화", "운동" ];
+		var frm = document.frm;
+		const id = frm.id.value;
+		const pwd = frm.pwd.value;
+		const pwdchk = frm.pwdchk.value;
+		const name = frm.name.value;
+		const gender = frm.gender.value;
+		const birth = frm.birthday.value;
+		const email = frm.email.value;
+		const zipcode = frm.zipcode.value;
+		const address = frm.address.value;
+		const hobby = [];
+		const job = frm.job.value;
+
+		const checkboxes = document.getElementsByName("hobby");
+		checkboxes.forEach(function(checkbox) {
+			if (checkbox.checked) {
+				hobby.push(checkbox.value);
+			}
+		});
+
+		if (id != "" & pwd != "" & pwdchk != "" & name != "" & birth != ""
+				& email != "" & zipcode != "" & address != "") {
+			if (gender.unchecked) {
+				alert("성별을 입력 하세요.");
+			} else if (hobby.unchecked) {
+				alert("취미를 입력 하세요.");
+			} else {
+				if (pwdChk() == false) {
+					alert("비밀번호가 틀렸습니다.");
+				} else {
+
+					frm.action = "member.jsp";
+					frm.submit();
+				}
+			}
+		} else {
+			alert("모두 입력하세요.");
+		}
+	}
+
+	function openPopup() {
+		var newwin = window.open("notice.html", "", "width=500, height=400");
+	}
+
+	function pwdChk() {
+		var frm = document.frm;
+		const pwd = frm.pwd.value;
+		const pwdchk = frm.pwdchk.value;
+		if (pwd != pwdchk) {
+			return false;
+		} else {
+			return true;
+		}
+	}
+</script>
+</head>
+<body>
+	<form action="" name="frm">
+		<table border="1" style="background-color: #CEECF5">
+			<tr>
+				<td colspan="3" style="background-color: #8181F7">회원가입</td>
+			</tr>
+			<tr>
+				<td>아이디</td>
+				<td><input name="id" size=15> <input type="button"
+					name="ID중복확인" value="ID중복확인" onclick="openPopup()"></td>
+				<td>아이디를 적어 주세요.</td>
+			</tr>
+			<tr>
+				<td>비밀번호</td>
+				<td><input name="pwd" size=15></td>
+				<td>비밀번호를 적어 주세요.</td>
+			</tr>
+			<tr>
+				<td>비밀번호 확인</td>
+				<td><input name="pwdchk" size=15></td>
+				<td>비밀번호를 확인합니다.</td>
+			</tr>
+			<tr>
+				<td>이름</td>
+				<td><input name="name" size=15></td>
+				<td>이름을 적어 주세요.</td>
+			</tr>
+			<tr>
+				<td>성별</td>
+				<td><small>남</small><input type="radio" name="gender" value="남">
+					<small>여</small><input type="radio" name="gender" value="여"></td>
+				<td>성별을 선택 하세요.</td>
+			</tr>
+			<tr>
+				<td>생년월일</td>
+				<td><input size=7 name="birthday">ex)830815</td>
+				<td>생년월일을 적어 주세요.</td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td><input size=30 name="email"></td>
+				<td>이메일을 적어 주세요.</td>
+			</tr>
+			<tr>
+				<td>우편번호</td>
+				<td><input size=5 name="zipcode"> <input type="button"
+					name="우편번호찾기" value="우편번호찾기" onclick="openPopup()"></td>
+				<td>우편번호를 검색하세요.</td>
+			</tr>
+			<tr>
+				<td>주소</td>
+				<td><input size=45 name="address"></td>
+				<td>주소를 적어 주세요.</td>
+			</tr>
+			<tr>
+				<td>취미</td>
+				<td><small>인터넷</small><input type="checkbox" name="hobby"
+					value="인터넷"> <small>여행</small><input type="checkbox"
+					name="hobby" value="여행"> <small>게임</small><input
+					type="checkbox" name="hobby" value="게임"> <small>영화</small><input
+					type="checkbox" name="hobby" value="영화"> <small>운동</small><input
+					type="checkbox" name="hobby" value="운동"></td>
+				<td>취미를 선택 하세요.</td>
+			</tr>
+			<tr>
+				<td>직업</td>
+				<td><select id="job">
+						<option value="0" selected>선택하세요.
+						<option value="회사원">회사원
+						<option value="연구전문직">연구전문직
+						<option value="교수학생">교수학생
+						<option value="일반자영업">일반자영업
+						<option value="공무원">공무원
+						<option value="의료인">의료인
+						<option value="법조인">법조인
+						<option value="종교,언론,에술인">종교.언론/예술인
+						<option value="농,축,수산,광업인">농/축/수산/광업인
+						<option value="주부">주부
+						<option value="무직">무직
+						<option value="기타">기타
+				</select></td>
+				<td>직업을 선택 하세요.</td>
+			</tr>
+			<tr>
+				<th colspan="3"><input type="button" value="회원가입"
+					onclick="chk()"> <input type="submit" value="다시쓰기">
+					<input type="submit" value="로그인"></th>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	td{
+		padding : 12px;
+		border: 1px solid #000000;
+	}
+	table{
+		border: 1px solid #000000;
+	}
+	input[type="button"]{
+		margin-left:20px;
+		background: #fff;
+		border: 1px solid #000000;
+		
+	}
+	th{
+		height:40px;
+		color: #fff;
+		background: pink;
+	}
+</style>
+</head>
+<body>
+
+	<form action="">
+		<table>
+
+			<tr>
+				<th colspan="3">회원 가입</th>
+			</tr>
+
+			<tr>
+				<td>아이디</td>
+				<td><input type="text" name="id"><input type="button" value="ID중복확인" name="idck"></td>
+				<td>아이디를 적어주세요.</td>
+			</tr>
+
+			<tr>
+				<td>비밀번호</td>
+				<td><input type="text" name="pwd"></td>
+				<td>비밀번호를 적어주세요.</td>
+			</tr>
+
+			<tr>
+				<td>비밀번호 확인</td>
+				<td><input type="text" name="pwdck"></td>
+				<td>비밀번호를 확인합니다.</td>
+			</tr>
+
+			<tr>
+				<td>이름</td>
+				<td><input type="text" name="name"></td>
+				<td>이름을 적어주세요.</td>
+			</tr>
+
+			<tr>
+				<td>성별</d>
+				<td>
+					남<input type="radio" name="gender"  value="남">
+					여<input type="radio" name="gender" value="여">
+				</td>
+				<td>성별을 선택하세요.</td>
+			</tr>
+
+			<tr>
+				<td>생년월일</td>
+				<td><input type="datetime" name="birthday"> ex)830815</td>
+				<td>생년월일을 적어주세요.</td>
+			</tr>
+
+			<tr>
+				<td>Email</td>
+				<td><input type="text" name="email"></td>
+				<td>이메일을 적어주세요.</td>
+			</tr>
+
+			<tr>
+				<td>우편번호</td>
+				<td><input type="text" name="addnum"><input type="button"
+					value="우편번호찾기" name="findaddnum"></td>
+				<td>우편번호를 적어주세요.</td>
+			</tr>
+
+			<tr>
+				<td>주소</td>
+				<td><input type="text" name="address"></td>
+				<td>주소 적어주세요.</td>
+			</tr>
+
+			<tr>
+				<td>취미</td>
+				<td>
+					인터넷<input type="checkbox" name="internet"> 
+					여행<input type="checkbox" name="travel">
+					게임<input type="checkbox" name="game"> 
+					영화<input type="checkbox" name="movie">
+					운동<input type="checkbox" name="excecise">
+				</td>
+				<td>취미를 선택하세요.</td>
+			</tr>
+
+			<tr>
+				<td>취미</td>
+				<td>
+					<select name="select">
+							<option value="0" selected>선택하세요.
+							<option value="회사원">회사원
+							<option value="연구전문직">연구전문직
+							<option value="교수학생">교수학생
+							<option value="일반자영업">일반자영업
+							<option value="공무원">공무원
+							<option value="의료인">의료인
+							<option value="법조인">법조인
+							<option value="종교,언론,에술인">종교.언론/예술인
+							<option value="농,축,수산,광업인">농/축/수산/광업인
+							<option value="주부">주부
+							<option value="무직">무직
+							<option value="기타">기타
+					</select></td>
+				<td>직업을 선택하세요.</td>
+			</tr>
+
+			<tr >
+				<td colspan="3" align="center">
+					<input type="button" value="회원 가입" name="signin"> 
+					<input type="reset" value="다시 쓰기" name="repost"> 
+					<input type="button"value="로그인" name="login">
+				</td>
+			</tr>
+
+		</table>
+	</form>
+
+</body>
+</html>

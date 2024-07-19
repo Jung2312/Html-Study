@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+.display-hidden{
+	display: none;
+}
+
+.main-container, .post-container {
+	width: 1000px;
+	height: 800px;
+	text-align: center;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+.box-style{
+	margin-bottom: 20px;
+	height: 30px;
+	width: 80%;
+}
+
+.box-style2{
+	margin-bottom: 20px;
+	height: 80px;
+	width: 80%;
+}
+
+.btn-style{
+	margin-bottom: 20px;
+	float: right;
+}

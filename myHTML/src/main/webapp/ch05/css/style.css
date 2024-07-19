@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+body {
+	font-family: serif;
+	color: #fff;
+}
+
+h1 {
+	color: red;
+	font-size: 30px;
+}
+
+p {
+	color: orange;
+	font-size: 22px;
+}
+
+div {
+	color: yellow;
+	font-size: 14px;
+}

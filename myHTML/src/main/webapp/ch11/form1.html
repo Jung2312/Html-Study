@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="" name = "frm" method="post">
+	id : <input name="id"><br>
+	pwd : <input type="password" name="pwd"><br>
+	<input type="button" value="로그인", onclick="chk()"><br>
+</form>
+	
+<script type="text/javascript">
+	function chk() {
+		f = document.frm;
+		
+		if(f.id.value == ""){
+			alert("아이디를 입력하세요.");
+			f.id.focus();
+			return;
+		}
+		
+		if((f.id.value == "")){
+			f.pwd.focus();
+			return;
+		}
+		f.action = "form1.jsp";
+		f.submit();
+	}
+</script>
+
+</body>
+</html>
